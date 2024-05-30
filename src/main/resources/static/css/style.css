@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../../static/img/океанариум.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+content {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+}
+
+content > * {
+    width: 100%;
+}
+
+content > * {
+    margin-bottom: 15px;
+    padding: 0.5em;
+    font-size: 16px;
+    text-align: center;
+}
+
+/**/
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+}
+
+form > * {
+    width: 100%;
+}
+
+form > * {
+    margin-bottom: 15px;
+    padding: 0.5em;
+    font-size: 16px;
+    text-align: center;
+}
+
+.fish-found {
+    margin: 0.5em;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+}
+
+.fish-not-found {
+    margin: 0.5em;
+    background-color: #800000;
+    font-weight: bold;
+    color: white;
+}
