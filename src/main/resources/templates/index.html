@@ -11,7 +11,7 @@
             <input required name="fishName" placeholder="Какое животное ищите?">
             <button type="submit">Проверить, есть ли рыбка в окенариуме</button>
             <h2 class="fish-found" th:if="${verdict != null && verdict}" th:text="|Рыбка в океанариуме!|"></h2>
-            <h2 class="fish-not-found" th:if="${verdict != null && !verdict}" th:text="|Рыбки нет, сорян!|"></h2>
+            <h2 class="fish-not-found" th:if="${verdict != null && !verdict}" th:text="|Рыбки нет, извините!|"></h2>
         </form>
     </content>
 </body>
