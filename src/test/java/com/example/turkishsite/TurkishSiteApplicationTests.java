@@ -23,7 +23,7 @@ class TurkishSiteApplicationTests {
 
     @DisplayName("Проверка на отсутствие рыбы в океанариуме")
     @ParameterizedTest(name = "{0} нет в океанариуме")
-    @ValueSource(strings = {"Мегалодон", "Щука", "Ботинок"})
+    @ValueSource(strings = {"Мегалодон", "Щука", "Карп"})
     void checkIfFishNotExist(String fishName) {
         Assertions.assertTrue(!oceanarium.exists(fishName));
     }
