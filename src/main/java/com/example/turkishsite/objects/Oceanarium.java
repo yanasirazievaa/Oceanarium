@@ -10,22 +10,19 @@ import java.util.List;
 @Data
 @ToString
 public class Oceanarium {
-    private List<Fish> fshs = new ArrayList<>();
-    public void addFish(String... fns) {
-        
-        for (String fn: fns) {
-            
-            Fish nfsh = new Fish(fn);
-            
-            fshs.add(nfsh);
-            
+    private List<Fish> fishList = new ArrayList<>();
+    public void addFish(String... fishNameList) {
+        for (String fishName: fishNameList) {
+            Fish newFish = new Fish(fishName);
+            fishList.add(newFish);
         }
     }
 
-    public boolean exists(String fn) {
+    public boolean exists(String fishName) {
         return Algorithm
-                
-                .find(fshs.stream().map(fs -> fs.getFishName().toLowerCase()).toList(), fn.toLowerCase());
-        
+                .find(
+                        fishList.stream()
+                                .map(fish -> fish.getFishName().toLowerCase())
+                                .toList(), fishName.toLowerCase());
     }
 }
