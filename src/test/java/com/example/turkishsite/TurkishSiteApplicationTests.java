@@ -16,14 +16,14 @@ class TurkishSiteApplicationTests {
 
     @DisplayName("Проверка на наличие рыбы в океанариуме")
     @ParameterizedTest(name = "{0} есть в океанариуме")
-    @ValueSource(strings = {"Кит", "Касатка", "Немо"})
+    @ValueSource(strings = {"Кит", "Касатка", "dfkdflgv"})
     void checkIfFishExist(String fishName) {
         Assertions.assertTrue(oceanarium.exists(fishName));
     }
 
     @DisplayName("Проверка на отсутствие рыбы в океанариуме")
     @ParameterizedTest(name = "{0} нет в океанариуме")
-    @ValueSource(strings = {"Мегалодон", "Щука", "Язь"})
+    @ValueSource(strings = {"Мегалодон", "Щука", "Немо"})
     void checkIfFishNotExist(String fishName) {
         Assertions.assertTrue(!oceanarium.exists(fishName));
     }
